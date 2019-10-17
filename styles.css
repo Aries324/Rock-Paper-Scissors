@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab&display=swap');
+body{
+    background-color: #ffe4e1;
+}
+h1{ 
+    font-family: 'Roboto Slab', serif;
+}
+
+h3{
+    font-family: 'Raleway', sans-serif;
+}
+#game {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    
+    
+  }
+  #p_wrapper, #compWrapper {
+    padding: 15px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  /* [ROCK/PAPER/SCISSORS IMAGE] */
+  #playersMove, #computersMove {
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  #game img {
+    width: 70%;
+    height: 200px;
+  }
+  
+  /* [YOUR MOVE] */
+  #p_wrapper {
+    background: #f38d8d;
+  }
+  #options, #button {
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    border: 0;
+    float: left;
+  }
+  #options { width: 70%; }
+  #button { width: 30%; }
+  
+ 
+  #compWrapper {
+    background: #23c8f1;
+  }
+  
+  
+  #scoreboard {
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    
+  }
+  
+ 

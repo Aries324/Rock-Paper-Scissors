@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <h3>Can you beat the computer? </h3>
+        <div id="game">
+          
+          <div id="p_wrapper">
+            <h2>YOUR MOVE</h2>
+            <div id="playersMove"></div>
+            <select id="options" disabled>
+              <option value="rock">Rock</option>
+              <option value="paper">Paper</option>
+              <option value="scissors">Scissors</option>
+            </select>
+           <input id="button" type="button" value="Go!"/disabled/>
+          </div>
+    
+         
+          <div id="compWrapper">
+            <h2>COMPUTER'S MOVE</h2>
+            <div id="computersMove"></div>
+          </div>
+        </div>
+    
+        
+        <div id="scoreboard">
+          Win - <span id="win">0</span> |
+          Lose - <span id="lose">0</span> |
+          Draw - <span id="draw">0</span>
+        </div>
+   <script src="scripts.js"></script>
+</body>
+</html>
