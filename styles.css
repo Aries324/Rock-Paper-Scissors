@@ -1,63 +1,172 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab&display=swap');
-body{
-    background-color: #ffe4e1;
+@import url("https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab&display=swap");
+body {
+  background: linear-gradient(79deg, rgb(117, 248, 236), rgb(255, 255, 255));
 }
-h1{ 
-    font-family: 'Roboto Slab', serif;
+:root {
+  box-sizing: border-box;
 }
 
-h3{
-    font-family: 'Raleway', sans-serif;
+.backdrop {
+  background: url("manvsmachine2.jpeg") center;
+  background-size: contain;
+  margin: auto;
+  width: 75vw;
+  height: 25vw;
+  position: relative;
 }
-#game {
-    max-width: 600px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 20px;
-    
-    
-  }
-  #p_wrapper, #compWrapper {
-    padding: 15px;
+
+/* h1{ 
+    font-family: 'Roboto Slab', serif;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+} */
+
+h1 {
+  color: #d42069;
+
+  background: -webkit-linear-gradient(
+    79deg,
+    rgb(117, 248, 236),
+    rgb(255, 255, 255)
+  );
+  background: linear-gradient(79deg, rgb(117, 248, 236), rgb(255, 255, 255));
+  mix-blend-mode: difference;
+  font: bolder 12vw "Alfa Slab One";
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 0px;
+  text-shadow: 0 0 9px white;
+  animation: glow 3s infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px white;
   }
-  
-  /* [ROCK/PAPER/SCISSORS IMAGE] */
-  #playersMove, #computersMove {
-    height: 200px;
-    margin-bottom: 10px;
+
+  15% {
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 1),
+      -2px -2px 10px rgba(255, 255, 255, 1);
   }
-  #game img {
-    width: 70%;
-    height: 200px;
+  30% {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7),
+      -2px -2px 4px rgba(255, 255, 255, 0.7);
   }
-  
-  /* [YOUR MOVE] */
-  #p_wrapper {
-    background: #f38d8d;
+  50% {
+    text-shadow: 20px 20px 50px rgba(255, 255, 255, 0.5),
+      -20px -20px 50px rgba(255, 255, 255, 0.5);
   }
-  #options, #button {
-    box-sizing: border-box;
-    display: block;
-    margin: 0;
-    padding: 10px;
-    border: 0;
-    float: left;
+}
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  mix-blend-mode: multiply;
+}
+h3 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 6.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
   }
-  #options { width: 70%; }
-  #button { width: 30%; }
-  
- 
-  #compWrapper {
-    background: #23c8f1;
+  to {
+    width: 100%;
   }
-  
-  
-  #scoreboard {
-    margin-top: 10px;
-    font-family: 'Raleway', sans-serif;
-    
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
   }
-  
- 
+  50% {
+    border-color: orange;
+  }
+}
+
+#game {
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+  margin: 0 auto;
+}
+#p_wrapper,
+#compWrapper {
+  padding: 15px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  border-radius: 2%;
+  animation: glow 3s infinite;
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px white;
+  }
+
+  15% {
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 1),
+      -2px -2px 10px rgba(255, 255, 255, 1);
+  }
+  30% {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7),
+      -2px -2px 4px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    text-shadow: 20px 20px 50px rgba(255, 255, 255, 0.5),
+      -20px -20px 50px rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* [ROCK/PAPER/SCISSORS IMAGE] */
+#playersMove,
+#computersMove {
+  height: 200px;
+  margin-bottom: 10px;
+}
+#game img {
+  width: 70%;
+  height: 200px;
+}
+
+/* [YOUR MOVE] */
+#p_wrapper {
+  background: #CC0000;
+}
+#options,
+#button {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  border: 0;
+  float: left;
+}
+#options {
+  width: 60%;
+  margin: 5%;
+  font-size: 14px;
+}
+#button {
+  width: 30%;
+  font-size: 14px;
+}
+
+#compWrapper {
+  background: #23c8f1;
+}
+
+#scoreboard {
+  margin-top: 10px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
